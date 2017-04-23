@@ -3,64 +3,75 @@ html {
 }
 
 body {
-
+  font-family: 'Handlee';
+  letter-spacing: 1px;
 }
 
 main {
-  background-image: url('main_header.jpg');
+  background-image: url('canvas-2.jpg');
   height: 1000px;
-  opacity: 0.3;
+  opacity: 0.8;
   margin: 0 20 0 20;
   margin-left: auto;
   margin-right: auto;
-  width: 1000px;
 }
 
 header {
-  font-size: 1.5em;
-  background-color: #8887ae;
+  background-color: #243744;
+  color: #e6e3e4;
+  height: 100px;
+}
+
+header h1 {
+  float: left;
+  font-size: 2em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-right: 1px solid gray;
 }
 
 header nav {
-  height: 120px;
-  color: #e6e3e4;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1000px;
+  height: 100%;
+  float: right;
+  width: 50%
+}
+
+header ul {
+  display: inline-block;
+  float: left;
 }
 
 header li {
-  padding-top: 50px;
+  padding-top: 40px;
   padding-left: 50px;
-  width: 18%;
+  font-size: 1em;
+  display: inline-block;
 }
 
 footer {
   background-color: #38383c;
   margin-top: 0;
   margin-bottom: 0;
+  height: 50px;
 }
 
 footer nav {
-  height: 50px;
   color: #e6e3e4;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1000px;
-}
-
-nav ul {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
-nav ul li {
-  float: left;
 }
 
 footer li {
   padding-top: 10px;
-  padding-left: 10px;
-  width: 25%;
+  padding-bottom: 0px;
+  padding-left: 40px;
+  display: inline-block;
+  width: 30%;
+}
+
+.home {
+  padding: 100px;
+  line-height: 50px;
 }
