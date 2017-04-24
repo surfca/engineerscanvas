@@ -7,9 +7,12 @@ body {
   letter-spacing: 1px;
 }
 
+html, body, main {
+  height: 100%;
+}
+
 main {
   background-image: url('canvas-2.jpg');
-  height: 1000px;
   opacity: 0.8;
   margin: 0 20 0 20;
   margin-left: auto;
