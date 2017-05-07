@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
   has_many :articles
-  validates 
+  validates :name, presence: true
 end
