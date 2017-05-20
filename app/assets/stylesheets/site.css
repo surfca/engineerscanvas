@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'Handlee';
+  font-family: 'Roboto';
   letter-spacing: 1px;
 }
 
@@ -25,12 +25,16 @@ header {
   height: 100px;
 }
 
+header {
+  font-family: 'Handlee';
+}
+
 header h1 {
   float: left;
   font-size: 2em;
   margin-top: 15px;
   margin-bottom: 15px;
-  padding-left: 50px;
+  padding-left: 150px;
   padding-right: 25px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -76,6 +80,7 @@ footer li {
 }
 
 .home {
-  padding: 100px;
+  padding: 100px 200px 0px 175px;
   line-height: 50px;
+  text-align: justify;
 }
