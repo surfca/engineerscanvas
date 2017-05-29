@@ -1,0 +1,10 @@
+<div id="index_page">
+<% @articles.each do |a| %>
+  <a href="<%= article_url(a)%>"
+    <article class="blog_article row">
+      <img class="blog_img unit" src="assets/personal-1.jpg" width="150px" height="150px">
+      <h1><%= a.title %></h1>
+    </article>
+  </a>
+<% end %>
+</div>

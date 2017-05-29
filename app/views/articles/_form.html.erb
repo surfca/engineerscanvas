@@ -1,0 +1,12 @@
+<%= form_for(@article) do |f| %>
+   <%= f.label :title %>
+   <%= f.text_field :title %>
+   <br>
+   <%= f.label :sub_title %>
+   <%= f.text_field :sub_title %>
+   <br>
+   <%= f.label :main_content %>
+   <%= f.text_area :main_content, size: "200x20" %>
+   <br>
+   <%= f.submit %>
+<% end %>

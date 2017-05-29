@@ -1,0 +1,40 @@
+#index_page {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 40px;
+}
+
+.blog_article {
+  height: 150px;
+  margin-bottom: 45px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.blog_article h1 {
+  padding-left: 175px;
+  padding-top: 8px;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#index_page a {
+  text-decoration: none;
+}
+
+.article_show {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 20px;
+}
+
+.article_show h1 {
+  font-size: 40px;
+}
+
+.article_show p {
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
