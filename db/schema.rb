@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170529234121) do
+ActiveRecord::Schema.define(version: 20170625200705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,10 +45,11 @@ ActiveRecord::Schema.define(version: 20170529234121) do
   end
 
   create_table "articles", force: true do |t|
-    t.text   "title"
-    t.text   "sub_title"
-    t.text   "main_content"
-    t.string "twitter_share_text"
+    t.text     "title"
+    t.text     "sub_title"
+    t.text     "main_content"
+    t.string   "twitter_share_text"
+    t.datetime "posted_on"
   end
 
   create_table "categories", force: true do |t|

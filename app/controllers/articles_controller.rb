@@ -5,6 +5,10 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   def create
     @article = Article.new(article_params)
     if @article.save
@@ -15,6 +19,12 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    @article = Article.find(params[:id])
+    if @article.update_attributes(article_params)
+      redirect_to article_url(@article)
+    else
+      render 'edit'
+    end
   end
 
   def index
@@ -28,7 +38,8 @@ class ArticlesController < ApplicationController
   def destroy
   end
 
+  private
   def article_params
-    params.require(:article).permit(:title,:sub_title,:main_content)
+    params.require(:article).permit(:title,:sub_title,:main_content,:posted_on)
   end
 end

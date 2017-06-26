@@ -31,10 +31,20 @@
 
 .article_show h1 {
   font-size: 40px;
+  text-align: center;
 }
 
 .article_show p {
   padding-top: 20px;
   font-size: 18px;
   line-height: 1.5;
+}
+
+.center {
+  text-align: center;
+}
+
+.article_show article {
+  border: 1px solid gray;
+  padding: 25px;
 }

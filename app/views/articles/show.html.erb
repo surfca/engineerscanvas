@@ -4,16 +4,18 @@
       <li><%= t.name %></li>
     <% end %>
   </ul>
-  <h1><%= @article.title %></h1>
-  <h2><%= @article.sub_title %></h1>
-
-  <a class="twitter-share-button"
-  href="https://twitter.com/share"
-  data-size="large"
-  data-text="<%= @article.twitter_share_text %>"
-  data-url="https://dev.twitter.com/web/tweet-button"
-  data-hashtags="example,demo">
-Tweet
-</a>
-  <p><%= @article.main_content %></p>
+  <article>
+    <h1><%= @article.title %></h1>
+    <h2><%= @article.sub_title %></h1>
+    <p class="center"><span><%= @article.posted_on.strftime("%B %e, %Y") %>&nbsp&nbsp/ <span>Sowjanya M</span</p>
+    <a class="twitter-share-button"
+    href="https://twitter.com/share"
+    data-size="large"
+    data-text="<%= @article.twitter_share_text %>"
+    data-url="https://dev.twitter.com/web/tweet-button"
+    data-hashtags="example,demo">
+  Tweet
+  </a>
+    <p><%= @article.main_content %></p>
+  </article>
 </div>
