@@ -17,6 +17,8 @@ main {
   margin: 0 20 0 20;
   margin-left: auto;
   margin-right: auto;
+  min-height: 100%;
+  height: auto;
 }
 
 header {
@@ -70,10 +72,11 @@ footer {
 
 footer nav {
   color: #e6e3e4;
+  text-align: center;
 }
 
 footer li {
-  padding-top: 10px;
+  padding-top: 18px;
   padding-bottom: 0px;
   padding-left: 40px;
   display: inline-block;

@@ -27,6 +27,7 @@
   padding-left: 200px;
   padding-right: 200px;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .article_show h1 {
@@ -45,6 +46,6 @@
 }
 
 .article_show article {
-  border: 1px solid gray;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
   padding: 25px;
 }
