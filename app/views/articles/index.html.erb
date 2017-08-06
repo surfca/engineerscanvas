@@ -1,10 +1,37 @@
 <div id="index_page">
-<% @articles.each do |a| %>
-  <a href="<%= article_url(a)%>"
-    <article class="blog_article row">
-      <img class="blog_img unit" src="assets/personal-1.jpg" width="150px" height="150px">
-      <h1><%= a.title %></h1>
-    </article>
-  </a>
-<% end %>
+  <% 0.upto(@articles.length/5 - 1) do |i| %>
+    <section class="row_styling clearfix">
+      <article class="unit col2of5">
+        <img class="blog_img" src="assets/personal-1.jpg" width="300px" height="150px">
+        <h1><%= @articles[i*5 + 1].title %></h1>
+        <p><%= @articles[i*5 + 1].intro %>...</p>
+      </article>
+      <section class="subrow_styling1 unit col2of5">
+        <section class="clearfix subrow_styling2">
+          <article class="unit col1of2">
+            <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
+            <h1><%= @articles[i*5 + 2].title %></h1>
+            <p><%= @articles[i*5 + 2].intro %>...</p>
+          </article>
+          <article class="unit col2of5 border_left">
+            <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
+            <h1><%= @articles[i*5 + 3].title %></h1>
+            <p><%= @articles[i*5 + 3].intro %>...</p>
+          </article>
+        </section>
+        <section class="clearfix">
+          <article class="unit col1of2">
+            <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
+            <h1><%= @articles[i*5 + 4].title %></h1>
+            <p><%= @articles[i*5 + 4].intro %>...</p>
+          </article>
+          <article class="unit col2of5 border_left">
+            <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
+            <h1><%= @articles[i*5 + 5].title %></h1>
+            <p><%= @articles[i*5 + 5].intro %>...</p>
+          </article>
+        </section>
+      </section>
+    </section>
+  <% end %>
 </div>

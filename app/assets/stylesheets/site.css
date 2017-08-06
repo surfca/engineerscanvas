@@ -12,9 +12,8 @@ html, body, main {
 }
 
 main {
-  background-image: url('canvas-2.jpg');
-  opacity: 0.8;
-  margin: 0 20 0 20;
+  background-image: url('canvas-11.jpg');
+  margin: 0 20px 0 20px;
   margin-left: auto;
   margin-right: auto;
   min-height: 100%;

@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_admin!, :except => [:index, :show]
+  respond_to :html, :json
 
   def new
     @article = Article.new
@@ -28,7 +29,12 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all
+    @articles_to_decorate = Article.all
+    @articles = []
+    @articles = @articles_to_decorate.map do |a|
+      ArticlePresenter.new(a)
+    end
+    respond_with(@articles)
   end
 
   def show

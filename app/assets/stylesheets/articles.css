@@ -1,6 +1,6 @@
 #index_page {
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 100px;
+  padding-right: 100px;
   padding-top: 40px;
 }
 
@@ -21,6 +21,20 @@
 
 #index_page a {
   text-decoration: none;
+}
+
+#index_page article {
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+#index_page h1 {
+  font-weight: bold;
+  font-size: 18px;
+}
+#index_page p {
+  font-size: 14px;
+  margin: 10px;
 }
 
 .article_show {
@@ -48,4 +62,16 @@
 .article_show article {
   box-shadow: 0 0 25px rgba(0,0,0,0.5);
   padding: 25px;
+}
+
+.row_styling {
+  border-bottom: 1px solid gray;
+}
+
+.subrow_styling1 {
+  border-left: 1px solid gray;
+}
+
+.subrow_styling2 {
+  border-bottom: 1px solid gray;
 }

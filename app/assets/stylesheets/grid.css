@@ -6,6 +6,12 @@
   float: left;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .col1of1 {
   float: none;
 }
@@ -48,6 +54,10 @@
 
 .col1of10 {
   width: 10%;
+}
+
+.border_left {
+  border-left: 1px solid gray;
 }
 
 .lastUnit {
