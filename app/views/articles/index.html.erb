@@ -2,7 +2,7 @@
   <% 0.upto(@articles.length/8 + 1) do |i| %>
     <% if i % 2 == 0 %>
     <section class="row_styling clearfix">
-      <% if my_article = @articles[i*8 + 1] %>
+      <% if my_article = @articles[i*8] %>
         <article class="unit col15">
           <a href="<%= article_url(my_article) %>">
             <img class="blog_img" src="assets/personal-1.jpg"  height="400px">
@@ -13,7 +13,7 @@
       <% end %>
       <section class=" unit col2of5">
         <section class="clearfix">
-          <% if my_article = @articles[i*8 + 2] %>
+          <% if my_article = @articles[i*8 + 1] %>
           <article class="unit col2of5">
             <a href="<%= article_url(my_article) %>">
               <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
@@ -22,7 +22,7 @@
             </a>
           </article>
           <% end %>
-          <% if my_article = @articles[i*8 + 3] %>
+          <% if my_article = @articles[i*8 + 2] %>
           <article class="unit col2of5 ">
             <a href="<%= article_url(my_article) %>">
               <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
@@ -33,7 +33,7 @@
           <% end %>
         </section>
         <section class="clearfix">
-          <% if my_article = @articles[i*8 + 4] %>
+          <% if my_article = @articles[i*8 + 3] %>
             <article class="unit col2of5">
               <a href="<%= article_url(my_article) %>">
                 <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
@@ -42,7 +42,7 @@
               </a>
             </article>
           <% end %>
-          <% if my_article = @articles[i*8 + 5] %>
+          <% if my_article = @articles[i*8 + 4] %>
             <article class="unit col2of5 ">
               <a href="<%= article_url(my_article) %>">
                 <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
@@ -53,7 +53,7 @@
           <% end %>
         </section>
       </section>
-      <% if my_article = @articles[i*8 + 6] %>
+      <% if my_article = @articles[i*8 + 5] %>
       <article class="unit col15">
         <a href="<%= article_url(@articles[i*5 + 6]) %>">
           <img class="blog_img" src="assets/personal-1.jpg"  height="400px">
@@ -63,7 +63,7 @@
       </article>
       <% end %>
       <section class="unit col1of5">
-        <% if my_article = @articles[i*8 + 7] %>
+        <% if my_article = @articles[i*8 + 6] %>
         <article>
           <a href="<%= article_url(@articles[i*5 + 7]) %>">
             <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
@@ -72,9 +72,9 @@
           </a>
         </article>
         <% end %>
-        <% if my_article = @articles[i*8 + 8] %>
+        <% if my_article = @articles[i*8 + 7] %>
         <article>
-          <a href="<%= article_url(@articles[i*5 + 8]) %>">
+          <a href="<%= article_url(my_article) %>">
             <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
             <h1><%= @articles[i*5 + 8].title %></h1>
             <p><%= @articles[i*5 + 8].intro %>...</p>
@@ -86,7 +86,7 @@
     <% else %>
     <section class=" unit col2of5">
       <section class="clearfix">
-        <% if my_article = @articles[i*8 + 1] %>
+        <% if my_article = @articles[i*8] %>
         <article class="unit col2of5">
           <a href="<%= article_url(my_article) %>">
             <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
@@ -95,7 +95,7 @@
           </a>
         </article>
         <% end %>
-        <% if my_article = @articles[i*8 + 2] %>
+        <% if my_article = @articles[i*8 + 1] %>
         <article class="unit col2of5 ">
           <a href="<%= article_url(my_article) %>">
             <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
@@ -106,26 +106,66 @@
         <% end %>
       </section>
       <section class="clearfix">
+        <% if my_article = @articles[i*8 + 2] %>
+        <article class="unit col2of5">
+          <a href="<%= article_url(my_article) %>">
+            <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
+            <h1><%= my_article.title %></h1>
+            <p><%= my_article.intro %>...</p>
+          </a>
+        </article>
+        <% end %>
         <% if my_article = @articles[i*8 + 3] %>
-          <article class="unit col2of5">
-            <a href="<%= article_url(my_article) %>">
-              <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
-              <h1><%= my_article.title %></h1>
-              <p><%= my_article.intro %>...</p>
-            </a>
-          </article>
-        <% end %>
-        <% if my_article = @articles[i*8 + 4] %>
-          <article class="unit col2of5 ">
-            <a href="<%= article_url(my_article) %>">
-              <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
-              <h1><%= my_article.title %></h1>
-              <p><%= my_article.intro %>...</p>
-            </a>
-          </article>
+        <article class="unit col2of5 ">
+          <a href="<%= article_url(my_article) %>">
+            <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
+            <h1><%= my_article.title %></h1>
+            <p><%= my_article.intro %>...</p>
+          </a>
+        </article>
         <% end %>
       </section>
+    </section>
+    <% if my_article = @articles[i*8 + 4] %>
+    <article class="unit col15">
+      <a href="<%= article_url(my_article) %>">
+        <img class="blog_img" src="assets/personal-1.jpg"  height="400px">
+        <h1><%= my_article.title %></h1>
+        <p><%= my_article.intro %>...</p>
+      </a>
+    </article>
+    <% end %>
+    <section class="unit col2of5">
+      <% if my_article = @articles[i*8 + 5] %>
+      <article>
+        <a href="<%= article_url(my_article) %>">
+          <img class="blog_img" src="assets/personal-1.jpg"  height="150px">
+          <h1><%= my_article.title %></h1>
+          <p><%= my_article.intro %>...</p>
+        </a>
+      </article>
+       <% end %>
+      <section class="clearfix">
+        <% if my_article = @articles[i*8 + 6] %>
+        <article class="unit col2of5">
+          <a href="<%= article_url(my_article) %>">
+            <img class="blog_img" src="assets/personal-1.jpg"  height="300px">
+            <h1><%= my_article.title %></h1>
+            <p><%= my_article.intro %>...</p>
+          </a>
+        </article>
+        <% end %>
+        <% if my_article = @articles[i*8 + 7] %>
+        <article class="unit col2of5">
+          <a href="<%= article_url(my_article) %>">
+            <img class="blog_img" src="assets/personal-1.jpg"  height="300px">
+            <h1><%= my_article.title %></h1>
+            <p><%= my_article.intro %>...</p>
+          </a>
+        </article>
+        <% end %>
       </section>
+    </section>
     <% end %>
   <% end %>
 </div>
