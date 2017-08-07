@@ -35,8 +35,11 @@
 }
 
 #index_page article {
-  padding-left: 15px;
-  padding-top: 10px;
+  margin: 15px;
+}
+
+#index_page img {
+  width: 100%;
 }
 
 #index_page h1 {
@@ -79,10 +82,10 @@
   border-bottom: 1px solid gray;
 }
 
-.subrow_styling1 {
+.border_left {
   border-left: 1px solid gray;
 }
 
-.subrow_styling2 {
+.border_bottom {
   border-bottom: 1px solid gray;
 }
