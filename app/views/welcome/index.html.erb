@@ -2,19 +2,19 @@
   <% 0.upto(@articles.length/5 - 1) do |i| %>
     <section class="row_styling clearfix">
       <article class="unit col2of5 welcome">
-        <h2>Engineers Canvas, is a platform of thoughts in Software Engineering, Systems and Leadership. Its built and maintained by <a href="https://linkedin.com/in/sowjum">Sowjanya M</a>, an Engineer, Entrepreneur and a Chef. Sowjanya started her career as a Hardware Engineer after graduating from UCSB with a Masters in Electrical and Computer Engineering. She has worked at various Hardware ASIC Engineering companies including Intel & Xilinx as a Pre-Silicon Engineer before she ventured to be a Full-time Software Engineer. I hope you enjoy this Blog. If you like the articles on this blog and want to be ontop of every article that has been published you can sign up for it here.</h2>
+        <h2>Engineers Canvas, is a platform of thoughts in Software Engineering, Systems and Leadership. We hope you enjoy this Blog. If you like our articles and want to be ontop of every article that has been published you can sign up for them here <form><input type="search" placeholder="youremail@domain.com"> <input type="submit" value="Sign Up"></form>. We Respect your privacy</h2>
       </article>
       <section class="subrow_styling1 unit col2of5">
         <section class="clearfix subrow_styling2">
           <article class="unit col1of2">
-            <a href="<%= article_url(@articles[i*5 + 1]) %>">
+            <a href="<%= article_url(@articles[i*5]) %>">
               <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
               <h1><%= @articles[i*5 + 1].title %></h1>
               <p><%= @articles[i*5 + 1].intro %>...</p>
             </a>
           </article>
           <article class="unit col2of5 border_left">
-            <a href="<%= article_url(@articles[i*5 + 2]) %>">
+            <a href="<%= article_url(@articles[i*5]) %>">
               <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
               <h1><%= @articles[i*5 + 2].title %></h1>
               <p><%= @articles[i*5 + 2].intro %>...</p>
@@ -23,14 +23,14 @@
         </section>
         <section class="clearfix">
           <article class="unit col1of2">
-            <a href="<%= article_url(@articles[i*5 + 3]) %>">
+            <a href="<%= article_url(@articles[i*5]) %>">
               <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
               <h1><%= @articles[i*5 + 3].title %></h1>
               <p><%= @articles[i*5 + 3].intro %>...</p>
             </a>
           </article>
           <article class="unit col2of5 border_left">
-            <a href="<%= article_url(@articles[i*5 + 4]) %>">
+            <a href="<%= article_url(@articles[i*5]) %>">
               <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
               <h1><%= @articles[i*5 + 4].title %></h1>
               <p><%= @articles[i*5 + 4].intro %>...</p>
