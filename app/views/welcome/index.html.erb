@@ -1,43 +1,49 @@
-<div id="index_page">
-  <% 0.upto(@articles.length/5 - 1) do |i| %>
-    <section class="row_styling clearfix">
+<div id="welcome">
+    <section class="clearfix">
       <article class="unit col2of5 welcome">
         <h2>Engineers Canvas, is a platform of thoughts in Software Engineering, Systems and Leadership. We hope you enjoy this Blog. If you like our articles and want to be ontop of every article that has been published you can sign up for them here <form><input type="search" placeholder="youremail@domain.com"> <input type="submit" value="Sign Up"></form>. We Respect your privacy</h2>
       </article>
-      <section class="subrow_styling1 unit col2of5">
-        <section class="clearfix subrow_styling2">
-          <article class="unit col1of2">
-            <a href="<%= article_url(@articles[i*5]) %>">
-              <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
-              <h1><%= @articles[i*5 + 1].title %></h1>
-              <p><%= @articles[i*5 + 1].intro %>...</p>
-            </a>
-          </article>
-          <article class="unit col2of5 border_left">
-            <a href="<%= article_url(@articles[i*5]) %>">
-              <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
-              <h1><%= @articles[i*5 + 2].title %></h1>
-              <p><%= @articles[i*5 + 2].intro %>...</p>
-            </a>
-          </article>
-        </section>
-        <section class="clearfix">
-          <article class="unit col1of2">
-            <a href="<%= article_url(@articles[i*5]) %>">
-              <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
-              <h1><%= @articles[i*5 + 3].title %></h1>
-              <p><%= @articles[i*5 + 3].intro %>...</p>
-            </a>
-          </article>
-          <article class="unit col2of5 border_left">
-            <a href="<%= article_url(@articles[i*5]) %>">
-              <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
-              <h1><%= @articles[i*5 + 4].title %></h1>
-              <p><%= @articles[i*5 + 4].intro %>...</p>
-            </a>
-          </article>
-        </section>
+      <section class="unit col2of5">
+          <section class="unit col1of2">
+            <% if my_article = @tech_articles[0] %>
+            <article>
+              <a href="<%= article_url(my_article) %>">
+                <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
+                <h1><%= my_article.title %></h1>
+                <p><%= my_article.intro %>...</p>
+              </a>
+            </article>
+            <% end %>
+            <% if my_article = @tech_articles[1] %>
+            <article>
+              <a href="<%= article_url(my_article) %>">
+                <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
+                <h1><%= my_article.title %></h1>
+                <p><%= my_article.intro %>...</p>
+              </a>
+            </article>
+            <% end %>
+          </section>
+          <section class="clearfix">
+            <% if my_article = @tech_articles[2] %>
+            <article>
+              <a href="<%= article_url(my_article) %>">
+                <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
+                <h1><%= my_article.title %></h1>
+                <p><%= my_article.intro %>...</p>
+              </a>
+            </article>
+            <% end %>
+            <% if my_article = @tech_articles[3] %>
+            <article>
+              <a href="<%= article_url(my_article) %>">
+                <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
+                <h1><%= my_article.title %></h1>
+                <p><%= my_article.intro %>...</p>
+              </a>
+            </article>
+            <% end %>
+          </section>
       </section>
     </section>
-  <% end %>
 </div>
