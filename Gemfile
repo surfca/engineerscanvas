@@ -11,15 +11,19 @@ gem 'jquery-rails'
 gem 'gon'
 gem 'devise'
 gem 'cancan'
-gem 'aws-ses'
-gem 'right_aws'
-gem 'SyslogLogger'
+# gem 'aws-ses'
+# gem 'right_aws'
+# gem 'SyslogLogger'
 gem 'sprockets'
-gem 'capistrano'
+# gem 'capistrano'
 
 group :development, :test do
   gem 'dotenv-rails'
   gem 'rspec-rails'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 # bundle exec rake doc:rails generates the API under doc/api.
