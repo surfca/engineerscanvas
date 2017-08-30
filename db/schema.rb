@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170625200705) do
+ActiveRecord::Schema.define(version: 20170830231308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20170625200705) do
     t.text     "main_content"
     t.string   "twitter_share_text"
     t.datetime "posted_on"
+    t.integer  "admin_id"
   end
 
   create_table "categories", force: true do |t|

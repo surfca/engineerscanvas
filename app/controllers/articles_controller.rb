@@ -7,11 +7,16 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
+    my_article = Article.find(params[:id])
+    if my_article.admin_id == current_admin.id
+      @article = my_article
+    else
+      redirect_to :root
+    end
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = Article.new(article_params.merge(admin_id: current_admin.id))
     if @article.save
       redirect_to articles_url
     else
@@ -29,11 +34,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles_to_decorate = Article.all
-    @articles = []
-    @articles = @articles_to_decorate.map do |a|
-      ArticlePresenter.new(a)
-    end
+    @articles = Article.all.map { |a| ArticlePresenter.new(a) }
     respond_with(@articles)
   end
 
