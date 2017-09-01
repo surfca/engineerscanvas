@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_admin!, :except => [:index, :show]
+  before_action :cerify_admin!, :except => [:index, :show]
   respond_to :html, :json
 
   def new
@@ -7,11 +7,10 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    my_article = Article.find(params[:id])
-    if my_article.admin_id == current_admin.id
-      @article = my_article
+    if admin_authorized?
+      @article = get_article
     else
-      redirect_to :root
+      warn_logout!
     end
   end
 
@@ -25,11 +24,15 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
-    if @article.update_attributes(article_params)
-      redirect_to article_url(@article)
+    if admin_authorized?
+      @article = get_article
+      if @article.update_attributes(article_params)
+        redirect_to article_url(@article)
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+      warn_logout!
     end
   end
 
@@ -48,5 +51,26 @@ class ArticlesController < ApplicationController
   private
   def article_params
     params.require(:article).permit(:title,:sub_title,:main_content,:posted_on)
+  end
+
+  def get_article
+    article ||= Article.find(params[:id])
+  end
+  
+  def admin_authorized?
+    #is the admin who created this article?
+    get_article.admin_id == current_admin.id
+  end
+
+  def certify_admin!
+    authenticate_admin!
+    #if current_admin is cerified return true otherwise signout current_admin
+    current_admin.certified || (signout current_admin)
+  end
+
+  def warn_logout!
+    flash[:notice] = "DONT DO THAT; You are editing someone else article???"
+    current_admin.auth_code.uncertify!
+    signout current_admin
   end
 end
