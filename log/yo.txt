@@ -1,0 +1,10 @@
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2017-08-31 23:38:28 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-08-31 23:38:28 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-08-31 23:38:28 -0700
+
+
+Started GET "/assets/canvas-11.jpg" for 127.0.0.1 at 2017-08-31 23:38:28 -0700

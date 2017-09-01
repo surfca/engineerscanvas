@@ -1,1 +1,4 @@
+<% if current_admin %>
+  <%= link_to 'Signout', {controller: 'admins/sessions', action: 'destroy', id: current_admin.id}, method: :delete %>
+<% end %>
 <%= render 'form' %>
