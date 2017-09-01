@@ -11,7 +11,7 @@ class WelcomeController < ApplicationController
 
   def certified
     authenticate_admin!
-    if current_admin.auth_code.code == params[:my_code]
+    if params[:my_code] && (current_admin.auth_code.try(:code) == params[:my_code])
       current_admin.certified = true
       current_admin.save
       flash[:notice] = "Authorized to create Articles"
