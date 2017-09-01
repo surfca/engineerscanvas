@@ -1,6 +1,6 @@
 class AuthCodesController < ApplicationController
   before_action :authenticate_admin!
-  request 'digest/md5'
+  require 'digest/md5'
 
   def new
     if super_admin?
