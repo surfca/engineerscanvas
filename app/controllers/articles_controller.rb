@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :cerify_admin!, :except => [:index, :show]
+  before_action :certify_admin!, :except => [:index, :show]
   respond_to :html, :json
 
   def new
