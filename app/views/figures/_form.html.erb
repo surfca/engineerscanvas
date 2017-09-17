@@ -1,0 +1,17 @@
+<%= form_for [@article, @figure] do |f| %>
+  <div class="form-row">
+    <%= f.label :fig_name %>
+    <%= f.text_field :fig_name %>
+  </div>
+  <div class="form-row">
+    <%= f.label :order_fig %>
+    <%= f.text_field :order_fig %>
+  </div>
+  <div class="form row">
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="form row">
+    <%= f.submit %>
+  </div>
+
+<% end %>

@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   get 'certify' => 'welcome#certify_me'
   post 'certified' => 'welcome#certified'
 
-  resources :articles 
+  resources :articles do
+    resources :figures do
+    end
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
