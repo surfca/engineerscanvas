@@ -1,49 +1,56 @@
 <div id="welcome">
-    <section class="clearfix">
-      <article class="unit col2of5 welcome">
-        <h2>Engineers Canvas, is a platform of thoughts in Software Engineering, Systems and Leadership. We hope you enjoy this Blog. If you like our articles and want to be ontop of every article that has been published you can sign up for them here <form><input type="search" placeholder="youremail@domain.com"> <input type="submit" value="Sign Up"></form>. We Respect your privacy</h2>
-      </article>
-      <section class="unit col2of5">
-          <section class="unit col1of2">
-            <% if my_article = @tech_articles[0] %>
-            <article>
-              <a href="<%= article_url(my_article) %>">
-                <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
-                <h1><%= my_article.title %></h1>
-                <p><%= my_article.intro %>...</p>
-              </a>
-            </article>
-            <% end %>
-            <% if my_article = @tech_articles[1] %>
-            <article>
-              <a href="<%= article_url(my_article) %>">
-                <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
-                <h1><%= my_article.title %></h1>
-                <p><%= my_article.intro %>...</p>
-              </a>
-            </article>
-            <% end %>
-          </section>
-          <section class="clearfix">
-            <% if my_article = @tech_articles[2] %>
-            <article>
-              <a href="<%= article_url(my_article) %>">
-                <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
-                <h1><%= my_article.title %></h1>
-                <p><%= my_article.intro %>...</p>
-              </a>
-            </article>
-            <% end %>
-            <% if my_article = @tech_articles[3] %>
-            <article>
-              <a href="<%= article_url(my_article) %>">
-                <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
-                <h1><%= my_article.title %></h1>
-                <p><%= my_article.intro %>...</p>
-              </a>
-            </article>
-            <% end %>
-          </section>
+  <section class="clearfix">
+    <article class="unit col2of5 intro">
+      <h2>Engineers Canvas, is a platform for thoughts on Software Engineering, Systems and Leadership. We hope you enjoy our thoughts.</h2>
+      <h3>Like our articles? Sign up for our newsletter</h3>
+      <form>
+        <div>
+          <input type="search" placeholder="youremail@domain.com"> 
+          <button class="prim-button">Subscribe</button>
+        </div>
+      </form>
+    </article>
+    <section class="unit col2of5">
+      <section class="unit col1of2">
+        <% if my_article = @tech_articles[0] %>
+        <article>
+          <a href="<%= article_url(my_article) %>">
+            <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
+            <h1><%= my_article.title %></h1>
+            <p><%= my_article.intro %>...</p>
+          </a>
+        </article>
+        <% end %>
+        <% if my_article = @tech_articles[1] %>
+        <article>
+          <a href="<%= article_url(my_article) %>">
+            <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
+            <h1><%= my_article.title %></h1>
+            <p><%= my_article.intro %>...</p>
+          </a>
+        </article>
+        <% end %>
+      </section>
+      <section class="clearfix">
+        <% if my_article = @tech_articles[2] %>
+        <article>
+          <a href="<%= article_url(my_article) %>">
+            <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
+            <h1><%= my_article.title %></h1>
+            <p><%= my_article.intro %>...</p>
+          </a>
+        </article>
+        <% end %>
+        <% if my_article = @tech_articles[3] %>
+        <article>
+          <a href="<%= article_url(my_article) %>">
+            <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
+            <h1><%= my_article.title %></h1>
+            <p><%= my_article.intro %>...</p>
+          </a>
+        </article>
+        <% end %>
       </section>
     </section>
+  </section>
 </div>

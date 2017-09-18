@@ -5,13 +5,35 @@
   min-height: 1000px;
 }
 
-#index_page .welcome {
-  padding-right: 25px;
+#welcome .intro {
+  line-height: 1.5;
+  padding: 20px;
 }
 
-#index_page .welcome h2{
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.5;
-  text-align: justify;
+#welcome .intro h2 {
+
+}
+
+#welcome .intro h3 {
+
+}
+
+#welcome input[type=search] {
+  width: 250px;
+  border: 1px solid #00bcd4;
+  padding: 15px;
+  font-size: 15px;
+}
+
+#welcome .prim-button {
+  background-color: #30678c;
+  border: 1px solid #5389ad;
+  padding: 12px;
+  border-radius: 2px;
+  font-size: 13px;
+  color: #cbdb4a;
+}
+
+#welcome .prim-button:hover {
+  cursor: pointer;
 }
