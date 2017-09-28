@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
   def edit
     if admin_authorized?
       @article = get_article
+      @figures = @article.figures
     else
       warn_logout!
     end
@@ -37,7 +38,11 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.visible.map { |a| ArticlePresenter.new(a) }
+    if super_admin?
+      @articles = Article.all.map { |a| ArticlePresenter.new(a) }
+    else
+      @articles = Article.visible.map { |a| ArticlePresenter.new(a) }
+    end
     respond_with(@articles)
   end
 
@@ -72,5 +77,9 @@ class ArticlesController < ApplicationController
     flash[:notice] = "DONT DO THAT; You are editing someone else article???"
     current_admin.auth_code.uncertify!
     signout current_admin
+  end
+
+  def super_admin?
+    (current_admin.email == 'sowju19@gmail.com')
   end
 end
