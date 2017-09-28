@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all.map { |a| ArticlePresenter.new(a) }
+    @articles = Article.visible.map { |a| ArticlePresenter.new(a) }
     respond_with(@articles)
   end
 

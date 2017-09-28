@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170916192446) do
+ActiveRecord::Schema.define(version: 20170928183733) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20170916192446) do
     t.string   "twitter_share_text", limit: 255
     t.datetime "posted_on"
     t.integer  "admin_id"
+    t.boolean  "visible",                        default: false
   end
 
   create_table "auth_codes", force: :cascade do |t|

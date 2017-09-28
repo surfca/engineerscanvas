@@ -7,4 +7,5 @@ class Article < ActiveRecord::Base
   has_many :references, through: :article_references
   belongs_to :admin
   belongs_to :category
+  scope :visible, -> { where(visible: true) }
 end
