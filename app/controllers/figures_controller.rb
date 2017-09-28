@@ -1,13 +1,14 @@
 class FiguresController < ApplicationController
   def new
     @article = Article.find(params[:article_id])
+    @existing_figures = @article.figures
     @figure = Figure.new(article_id: @article_id)
   end
 
   def create
-    @figure = Figure.new(figure_params)
-    puts "I am figure params #{figure_params}"
     @article = Article.find(params[:article_id])
+    @figure = Figure.new(figure_params)
+    @figure.article_id = params[:article_id]
     if @figure.save
       redirect_to article_url(@article)
     else
