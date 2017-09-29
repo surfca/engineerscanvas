@@ -12,10 +12,10 @@
       <h4>Love our Articles?</h4>
       <p>Buy us Coffee or Dinner</p> 
     </article>
-    <section class="unit col2of5">
-      <section class="unit col1of2">
+    <section class="unit col2of5 center_content">
+      <section class="unit col1of2 border_right">
         <% if my_article = @tech_articles[0] %>
-        <article>
+        <article class="border_bottom">
           <a href="<%= article_url(my_article) %>">
             <%= image_tag my_article.welcome_image %>
           </a>
@@ -35,7 +35,7 @@
       </section>
       <section class="clearfix">
         <% if my_article = @tech_articles[2] %>
-        <article>
+        <article class="border_bottom">
           <a href="<%= article_url(my_article) %>">
             <%= image_tag my_article.welcome_image %>
           </a>
