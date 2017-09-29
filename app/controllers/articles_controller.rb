@@ -80,6 +80,6 @@ class ArticlesController < ApplicationController
   end
 
   def super_admin?
-    (current_admin.email == 'sowju19@gmail.com')
+    (current_admin && current_admin.email == 'sowju19@gmail.com')
   end
 end
