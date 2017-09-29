@@ -48,7 +48,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    @figures = @article.figures.order_by(:order_num)
+    @figures = @article.figures.order(:order_num)
   end
 
   def destroy
