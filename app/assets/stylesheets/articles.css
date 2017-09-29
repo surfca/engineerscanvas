@@ -70,7 +70,8 @@
 }
 
 .article_show figure {
-  margin-top: 10px
+  margin-top: 10px;
+  opacity: 0.9;
 }
 
 .row_styling {
