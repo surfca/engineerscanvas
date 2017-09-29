@@ -1,2 +1,6 @@
 <%= render 'form' %>
+<h1>Existing Images</h1>
+<% @figures.each do |f| %>
+  <%= image_tag f.avatar.url(:small) %>
+<% end %>
 <%= link_to 'Add Image', new_article_figure_path(@article.id) %>
