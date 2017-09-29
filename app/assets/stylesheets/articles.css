@@ -19,13 +19,7 @@
   font-size: 18px;
 }
 
-.blog_article figure {
-  margin-top: 10px
-}
 
-.blog_article image {
-  width: 990px;
-}
 
 #index_page a {
   text-decoration: none;
@@ -73,6 +67,10 @@
 .article_show article {
   box-shadow: 0 0 25px rgba(0,0,0,0.5);
   padding: 25px;
+}
+
+.article_show figure {
+  margin-top: 10px
 }
 
 .row_styling {
