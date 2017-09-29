@@ -48,7 +48,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    if @article.visible
+    if super_admin? || @article.visible
       @figures = @article.figures.order(:order_num)
       render 'show'
     else
