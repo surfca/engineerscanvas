@@ -34,6 +34,6 @@ class FiguresController < ApplicationController
   private
 
   def figure_params
-    params.require(:figure).permit(:fig_name, :order_fig, :avatar, :article_id)
+    params.require(:figure).permit(:fig_name, :order_num, :avatar, :article_id)
   end
 end

@@ -61,7 +61,7 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:title,:sub_title,:main_content,:posted_on)
+    params.require(:article).permit(:title,:sub_title,:main_content,:posted_on,:visible)
   end
 
   def get_article
