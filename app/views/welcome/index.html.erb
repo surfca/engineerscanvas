@@ -17,7 +17,7 @@
         <% if my_article = @tech_articles[0] %>
         <article>
           <a href="<%= article_url(my_article) %>">
-            <%= image_tag my_article.avatar.url(:small) %>
+            <%= image_tag my_article.welcome_image %>
           </a>
           <h1><%= my_article.title %></h1>
           <p><%= my_article.intro %>...</p>
@@ -26,7 +26,7 @@
         <% if my_article = @tech_articles[1] %>
         <article>
           <a href="<%= article_url(my_article) %>">
-            <%= image_tag my_article.avatar.url(:small) %>
+            <%= image_tag my_article.welcome_image %>
           </a>
           <h1><%= my_article.title %></h1>
           <p><%= my_article.intro %>...</p>
@@ -37,7 +37,7 @@
         <% if my_article = @tech_articles[2] %>
         <article>
           <a href="<%= article_url(my_article) %>">
-            <%= image_tag my_article.avatar.url(:small) %>
+            <%= image_tag my_article.welcome_image %>
           </a>
           <h1><%= my_article.title %></h1>
           <p><%= my_article.intro %>...</p>
@@ -46,7 +46,7 @@
         <% if my_article = @tech_articles[3] %>
         <article>
           <a href="<%= article_url(my_article) %>">
-            <%= image_tag my_article.avatar.url(:small) %>
+            <%= image_tag my_article.welcome_image %>
           </a>
           <h1><%= my_article.title %></h1>
           <p><%= my_article.intro %>...</p>
