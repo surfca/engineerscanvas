@@ -50,9 +50,9 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if @article.visible
       @figures = @article.figures.order(:order_num)
-      render show
+      render 'show'
     else
-      redirect_to index
+      redirect_to articles_url
     end
   end
 
