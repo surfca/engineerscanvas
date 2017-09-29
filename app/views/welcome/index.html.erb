@@ -17,19 +17,19 @@
         <% if my_article = @tech_articles[0] %>
         <article>
           <a href="<%= article_url(my_article) %>">
-            <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
-            <h1><%= my_article.title %></h1>
-            <p><%= my_article.intro %>...</p>
+            <%= image_tag my_article.avatar.url(:small) %>
           </a>
+          <h1><%= my_article.title %></h1>
+          <p><%= my_article.intro %>...</p>
         </article>
         <% end %>
         <% if my_article = @tech_articles[1] %>
         <article>
           <a href="<%= article_url(my_article) %>">
-            <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
-            <h1><%= my_article.title %></h1>
-            <p><%= my_article.intro %>...</p>
+            <%= image_tag my_article.avatar.url(:small) %>
           </a>
+          <h1><%= my_article.title %></h1>
+          <p><%= my_article.intro %>...</p>
         </article>
         <% end %>
       </section>
@@ -37,19 +37,19 @@
         <% if my_article = @tech_articles[2] %>
         <article>
           <a href="<%= article_url(my_article) %>">
-            <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
-            <h1><%= my_article.title %></h1>
-            <p><%= my_article.intro %>...</p>
+            <%= image_tag my_article.avatar.url(:small) %>
           </a>
+          <h1><%= my_article.title %></h1>
+          <p><%= my_article.intro %>...</p>
         </article>
         <% end %>
         <% if my_article = @tech_articles[3] %>
         <article>
           <a href="<%= article_url(my_article) %>">
-            <img class="blog_img" src="assets/personal-1.jpg" width="220px" height="150px">
-            <h1><%= my_article.title %></h1>
-            <p><%= my_article.intro %>...</p>
+            <%= image_tag my_article.avatar.url(:small) %>
           </a>
+          <h1><%= my_article.title %></h1>
+          <p><%= my_article.intro %>...</p>
         </article>
         <% end %>
       </section>

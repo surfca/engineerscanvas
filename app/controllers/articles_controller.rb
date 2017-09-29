@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if super_admin? || @article.visible
       @figures = @article.figures.order(:order_num)
-      render 'show'
+      render 'show.html.erb'
     else
       redirect_to articles_url
     end
