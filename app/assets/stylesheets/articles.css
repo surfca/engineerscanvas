@@ -19,6 +19,14 @@
   font-size: 18px;
 }
 
+.blog_article figure {
+  margin-top: 10px
+}
+
+.blog_article image {
+  width: 990px;
+}
+
 #index_page a {
   text-decoration: none;
 }
