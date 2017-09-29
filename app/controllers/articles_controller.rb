@@ -48,7 +48,12 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    @figures = @article.figures.order(:order_num)
+    if @article.visible
+      @figures = @article.figures.order(:order_num)
+      render 'show'
+    else
+      redirect_to 'index'
+    end
   end
 
   def destroy
