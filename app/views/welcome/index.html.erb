@@ -24,7 +24,7 @@
         </article>
         <% end %>
         <% if my_article = @tech_articles[1] %>
-        <article>
+        <article class= "margin_top">
           <a href="<%= article_url(my_article) %>">
             <%= image_tag my_article.welcome_image %>
           </a>
@@ -44,7 +44,7 @@
         </article>
         <% end %>
         <% if my_article = @tech_articles[3] %>
-        <article>
+        <article class="margin_top">
           <a href="<%= article_url(my_article) %>">
             <%= image_tag my_article.welcome_image %>
           </a>
