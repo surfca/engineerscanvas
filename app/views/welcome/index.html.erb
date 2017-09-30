@@ -15,7 +15,7 @@
     <section class="unit col2of5 center_content">
       <section class="unit col1of2 border_right">
         <% if my_article = @tech_articles[0] %>
-        <article class="border_bottom">
+        <article class="border_bottom padding_bottom">
           <a href="<%= article_url(my_article) %>">
             <%= image_tag my_article.welcome_image %>
           </a>
@@ -23,7 +23,7 @@
         </article>
         <% end %>
         <% if my_article = @tech_articles[1] %>
-        <article class= "margin_top">
+        <article class= "padding_top">
           <a href="<%= article_url(my_article) %>">
             <%= image_tag my_article.welcome_image %>
           </a>
@@ -33,7 +33,7 @@
       </section>
       <section class="clearfix">
         <% if my_article = @tech_articles[2] %>
-        <article class="border_bottom">
+        <article class="border_bottom padding_bottom">
           <a href="<%= article_url(my_article) %>">
             <%= image_tag my_article.welcome_image %>
           </a>
@@ -41,7 +41,7 @@
         </article>
         <% end %>
         <% if my_article = @tech_articles[3] %>
-        <article class="margin_top">
+        <article class="padding_top">
           <a href="<%= article_url(my_article) %>">
             <%= image_tag my_article.welcome_image %>
           </a>
